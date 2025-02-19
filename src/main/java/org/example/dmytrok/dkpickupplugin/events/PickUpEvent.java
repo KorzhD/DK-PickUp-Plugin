@@ -33,7 +33,7 @@ public class PickUpEvent implements Listener {
                         + event.getItem().getItemStack().getAmount());
                 return;
             }
-            player.sendMessage("§8Picked up: " + "§7" + event.getItem().getItemStack().getItemMeta().getDisplayName() + " x"
+            player.sendMessage("§8Picked up: " + "§7" + event.getItem().getItemStack().getType().name() + " x"
                     + event.getItem().getItemStack().getAmount());
         }
     }
