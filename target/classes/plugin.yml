@@ -1,3 +1,6 @@
 name: DK-PickUp-Plugin
 version: '1'
 main: org.example.dmytrok.dkpickupplugin.DK_PickUp_Plugin
+commands:
+  pickUp:
+    description: Enable/Disable Pick Up messages

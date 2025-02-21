@@ -1,15 +1,20 @@
 package org.example.dmytrok.dkpickupplugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.example.dmytrok.dkpickupplugin.commands.PickUpCommand;
 import org.example.dmytrok.dkpickupplugin.events.PickUpEvent;
+import org.example.dmytrok.dkpickupplugin.utils.PickUpManager;
 
 public final class DK_PickUp_Plugin extends JavaPlugin {
 
+    private final PickUpManager pickUpManager = new PickUpManager();
     @Override
     public void onEnable() {
         getLogger().info("PickUp plugin enabled");
 
-        getServer().getPluginManager().registerEvents(new PickUpEvent(), this);
+        getServer().getPluginManager().registerEvents(new PickUpEvent(pickUpManager), this);
+        getServer().getPluginCommand("pickUp").setExecutor(new PickUpCommand(pickUpManager));
+
 
     }
 

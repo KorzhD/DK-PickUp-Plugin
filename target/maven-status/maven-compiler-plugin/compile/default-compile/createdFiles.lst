@@ -1,2 +1,4 @@
 org\example\dmytrok\dkpickupplugin\DK_PickUp_Plugin.class
+org\example\dmytrok\dkpickupplugin\utils\PickUpManager.class
 org\example\dmytrok\dkpickupplugin\events\PickUpEvent.class
+org\example\dmytrok\dkpickupplugin\commands\PickUpCommand.class
