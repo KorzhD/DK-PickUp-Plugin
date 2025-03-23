@@ -10,7 +10,7 @@ public final class DK_PickUp_Plugin extends JavaPlugin {
     private final PickUpManager pickUpManager = new PickUpManager();
     @Override
     public void onEnable() {
-        getLogger().info("PickUp plugin enabled");
+        getLogger().info("\u001B[32m!---------------PickUp Plugin enabled---------------!\u001B[0m");
 
         getServer().getPluginManager().registerEvents(new PickUpEvent(pickUpManager), this);
         getServer().getPluginCommand("pickUp").setExecutor(new PickUpCommand(pickUpManager));
@@ -20,6 +20,6 @@ public final class DK_PickUp_Plugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info("PickUp plugin disabled");
+        getLogger().info("\u001B[32m!---------------PickUp Plugin enabled---------------!\u001B[0m");
     }
 }
